@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choose a design — Indira Mind Clinic</title>
+<meta name="description" content="Seven Home page design styles for Indira Mind Clinic. Open each one and compare.">
+<meta name="robots" content="noindex">
+<style>
+/* Deliberately neutral, so it does not make any of the seven look better or worse. */
+:root{
+  --bg:#F7F7F8;
+  --panel:#FFFFFF;
+  --ink:#1A1A1C;
+  --muted:#65656E;
+  --line:#E3E3E7;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --shell:1120px;
+  --gutter:clamp(20px,4vw,40px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid #2F6F73;outline-offset:3px;border-radius:6px}
+
+.shell{width:100%;max-width:var(--shell);margin-inline:auto;padding-inline:var(--gutter)}
+
+/* ============ page head ============ */
+.top{padding:clamp(36px,6vw,68px) 0 clamp(26px,4vw,40px);border-bottom:1px solid var(--line)}
+.brandline{display:flex;align-items:center;gap:13px;margin-bottom:26px}
+.brandline img{width:34px;height:auto}
+.brandline span{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+h1{font-size:clamp(27px,4vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin:0}
+.top p{margin:16px 0 0;font-size:clamp(16px,1.8vw,18px);color:var(--muted);max-width:62ch}
+
+.how{
+  margin-top:clamp(24px,3vw,32px);background:var(--panel);border:1px solid var(--line);
+  border-radius:14px;padding:clamp(18px,2.4vw,24px);
+}
+.how h2{font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 12px}
+.how ol{margin:0;padding-left:20px;color:var(--ink)}
+.how li+li{margin-top:7px}
+.how li{font-size:15.5px}
+
+/* ============ the seven cards ============ */
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));
+  gap:clamp(18px,2.4vw,26px);
+  padding:clamp(30px,4.6vw,52px) 0 clamp(40px,6vw,72px);
+}
+.style{
+  background:var(--panel);border:1px solid var(--line);border-radius:18px;
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .35s cubic-bezier(.2,.7,.3,1),box-shadow .35s ease;
+}
+.style:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(26,26,28,.09)}
+
+/* --- little CSS mock-up of each design, drawn in its own colours --- */
+.thumb{aspect-ratio:16/10;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.thumb .bar{position:absolute;left:0;right:0;top:0;height:13%}
+.thumb .blk{position:absolute;border-radius:2px}
+.thumb .dot{position:absolute;border-radius:50%}
+
+/* 01 minimalist luxury */
+.t1{background:#FAF7F2}
+.t1 .bar{background:#1F4D3F}
+.t1 .h{left:9%;top:28%;width:46%;height:9%;background:#1F4D3F}
+.t1 .h2{left:9%;top:41%;width:32%;height:9%;background:#1F4D3F;opacity:.85}
+.t1 .r{left:9%;top:57%;width:16%;height:2px;background:#B89B5E;border-radius:0}
+.t1 .p{left:9%;top:66%;width:38%;height:4%;background:#6F6B63;opacity:.4}
+.t1 .img{right:8%;top:24%;width:26%;height:54%;background:#F3EEE6;border:1px solid rgba(184,155,94,.5)}
+
+/* 02 editorial */
+.t2{background:#F4F1EC}
+.t2 .bar{background:#141414}
+.t2 .h{left:7%;top:26%;width:52%;height:13%;background:#141414}
+.t2 .h2{left:7%;top:43%;width:34%;height:13%;background:#1F4D3F}
+.t2 .r{left:7%;top:64%;width:52%;height:1px;background:#141414;opacity:.5;border-radius:0}
+.t2 .p{left:7%;top:71%;width:40%;height:4%;background:#141414;opacity:.3}
+.t2 .img{right:0;top:20%;width:30%;height:70%;background:#DED8CD}
+
+/* 03 japandi */
+.t3{background:#EFE9E1}
+.t3 .bar{background:#DCD2C5}
+.t3 .h{left:10%;top:30%;width:44%;height:8%;background:#3D3A35;opacity:.85;border-radius:4px}
+.t3 .h2{left:10%;top:42%;width:30%;height:8%;background:#3D3A35;opacity:.6;border-radius:4px}
+.t3 .p{left:10%;top:57%;width:38%;height:4%;background:#6E6A63;opacity:.4;border-radius:4px}
+.t3 .img{right:9%;top:22%;width:26%;height:56%;background:#E5DDD2;
+  border-radius:50% 50% 8px 8px / 34% 34% 8px 8px}
+.t3 .dot{left:10%;top:70%;width:7%;aspect-ratio:1;background:#6B7F6E;opacity:.5}
+
+/* 04 organic */
+.t4{background:#E9E2D0}
+.t4 .bar{background:#2F4F3E}
+.t4 .h{left:8%;top:28%;width:46%;height:9%;background:#2F4F3E;border-radius:4px}
+.t4 .h2{left:8%;top:41%;width:30%;height:9%;background:#2F4F3E;opacity:.75;border-radius:4px}
+.t4 .p{left:8%;top:56%;width:36%;height:4%;background:#5F6657;opacity:.45;border-radius:4px}
+.t4 .img{right:8%;top:22%;width:28%;aspect-ratio:1/1.1;background:#A3B18A;
+  border-radius:58% 42% 46% 54% / 44% 50% 50% 56%;height:auto}
+.t4 .wave{position:absolute;left:0;right:0;bottom:0;height:24%;
+  background:#F5F1E6;border-radius:56% 44% 0 0 / 74% 66% 0 0}
+
+/* 05 glass bento */
+.t5{background:linear-gradient(160deg,#E6F4F1,#FFFFFF)}
+.t5 .bar{background:rgba(18,86,75,.92)}
+.t5 .cl{position:absolute;border-radius:50%;filter:blur(16px)}
+.t5 .cl1{width:40%;aspect-ratio:1;background:#A8DCD2;right:-6%;top:6%;opacity:.8}
+.t5 .cl2{width:34%;aspect-ratio:1;background:#CDE7F5;left:-6%;bottom:-8%;opacity:.7}
+.t5 .g{position:absolute;background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.9);
+  border-radius:7px;backdrop-filter:blur(6px)}
+.t5 .g1{left:6%;top:22%;width:50%;height:44%}
+.t5 .g2{right:6%;top:22%;width:32%;height:44%}
+.t5 .g3{left:6%;bottom:8%;width:26%;height:22%}
+.t5 .g4{left:35%;bottom:8%;width:21%;height:22%}
+.t5 .g5{right:6%;bottom:8%;width:32%;height:22%;background:rgba(18,86,75,.88);border-color:transparent}
+
+/* 06 atelier */
+.t6{background:#F6F3EE}
+.t6 .bar{background:#232120}
+.t6 .h{left:7%;top:26%;width:44%;height:9%;background:#2C2926}
+.t6 .h2{left:7%;top:39%;width:30%;height:9%;background:#A87E4F}
+.t6 .r{left:7%;top:55%;width:20%;height:1px;background:#A87E4F;border-radius:0}
+.t6 .img{right:6%;top:20%;width:30%;height:58%;background:#DED7CA}
+.t6 .tl{position:absolute;bottom:7%;height:22%;background:#DED7CA}
+.t6 .tl1{left:7%;width:26%}
+.t6 .tl2{left:36%;width:26%}
+.t6 .tl3{left:65%;width:26%}
+.t6 .tl::after{content:"";position:absolute;left:0;right:0;bottom:0;height:45%;background:#232120}
+.t6 .gl{position:absolute;top:20%;right:6%;width:9%;height:58%;
+  background:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.75));
+  transform:skewX(-25deg)}
+
+/* 07 warm care */
+.t7{background:#FDFBF6}
+.t7 .bar{background:#FFF5F2}
+.t7 .pill{position:absolute;top:3%;right:6%;width:16%;height:7%;border-radius:999px;background:#E76943}
+.t7 .h{left:7%;top:24%;width:42%;height:10%;background:#1E2420;border-radius:3px}
+.t7 .h2{left:7%;top:37%;width:28%;height:6%;background:#4C4C4C;opacity:.45;border-radius:3px}
+.t7 .pl{position:absolute;left:7%;top:47%;width:22%;height:8%;border-radius:999px;background:#E76943}
+.t7 .img{right:7%;top:20%;width:30%;height:40%;background:#FFE9E3;border-radius:8px}
+.t7 .sc{position:absolute;left:10%;right:10%;top:62%;height:16%;background:#fff;
+  border-radius:8px;box-shadow:0 3px 10px rgba(30,36,32,.12)}
+.t7 .cd{position:absolute;bottom:5%;height:13%;background:#fff;border-radius:6px;border-top:4px solid #FFF5F2}
+.t7 .cd1{left:7%;width:26%}
+.t7 .cd2{left:37%;width:26%}
+.t7 .cd3{left:67%;width:26%}
+
+/* --- card body --- */
+.style__body{padding:clamp(20px,2.4vw,26px);display:flex;flex-direction:column;flex:1;gap:14px}
+.style__no{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--muted)}
+.style h3{font-size:20px;font-weight:700;letter-spacing:-.015em;margin:0}
+.style__desc{margin:0;font-size:15.5px;color:var(--muted);flex:1}
+
+.meta{display:flex;flex-direction:column;gap:10px;font-size:13px;color:var(--muted)}
+.meta div{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.meta b{font-weight:600;color:var(--ink);font-size:12px;letter-spacing:.08em;
+  text-transform:uppercase;min-width:52px}
+.sw{display:flex;gap:5px}
+.sw span{width:17px;height:17px;border-radius:5px;border:1px solid rgba(0,0,0,.09)}
+
+.open{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:48px;padding:0 22px;border-radius:10px;
+  background:var(--ink);color:#fff;text-decoration:none;
+  font-size:15px;font-weight:600;
+  transition:background .3s ease;
+}
+.open:hover,.open:focus-visible{background:#38383E}
+.open svg{width:16px;height:16px}
+
+/* ============ foot ============ */
+.foot{border-top:1px solid var(--line);padding:clamp(28px,4vw,44px) 0 clamp(40px,6vw,64px);
+  color:var(--muted);font-size:14.5px}
+.foot h2{font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 14px}
+.foot ul{margin:0;padding-left:20px}
+.foot li+li{margin-top:6px}
+.foot p{margin:18px 0 0;max-width:70ch}
+.foot code{background:#ECECF0;border-radius:4px;padding:1px 6px;font-size:13.5px}
+
+@media (max-width:560px){
+  .grid{grid-template-columns:1fr}
+  .open{width:100%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="shell">
+    <div class="brandline">
+      <img src="../assets/img/logo.png" alt="" width="34" height="47">
+      <span>Indira Mind Clinic</span>
+    </div>
+
+    <h1>Choose a design for the Home page</h1>
+    <p>
+      Seven designs of the same Home page. The words are identical in all seven &mdash;
+      only the look changes, so the comparison is fair. Open each one, then pick the
+      one that feels right for the clinic.
+    </p>
+
+    <div class="how">
+      <h2>How to compare them</h2>
+      <ol>
+        <li>Open each design, scroll to the bottom, then come back using the &ldquo;All styles&rdquo; button at the bottom-left.</li>
+        <li>Look at each one on a phone as well, not only on a laptop.</li>
+        <li>Ignore the grey boxes and the bracketed words &mdash; those are details we are still waiting for.</li>
+        <li>Judge the <em>feeling</em>: does it look like a place you would trust with something personal?</li>
+      </ol>
+    </div>
+  </div>
+</header>
+
+<main class="shell">
+  <div class="grid">
+
+    <!-- 01 -->
+    <article class="style">
+      <div class="thumb t1" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="blk h"></span><span class="blk h2"></span>
+        <span class="blk r"></span><span class="blk p"></span>
+        <span class="blk img"></span>
+      </div>
+      <div class="style__body">
+        <p class="style__no">01</p>
+        <h3>Minimalist Luxury</h3>
+        <p class="style__desc">Calm and classy, with a lot of white space and thin gold lines. Feels like a quiet, premium private clinic.</p>
+        <div class="meta">
+          <div><b>Colours</b>
+            <span class="sw"><span style="background:#FAF7F2"></span><span style="background:#1F4D3F"></span><span style="background:#B89B5E"></span></span>
+          </div>
+          <div><b>Fonts</b> Cormorant Garamond + Inter</div>
+        </div>
+        <a class="open" href="01-minimalist-luxury/index.html">
+          Open this design
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- 02 -->
+    <article class="style">
+      <div class="thumb t2" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="blk h"></span><span class="blk h2"></span>
+        <span class="blk r"></span><span class="blk p"></span>
+        <span class="blk img"></span>
+      </div>
+      <div class="style__body">
+        <p class="style__no">02</p>
+        <h3>Editorial</h3>
+        <p class="style__desc">Laid out like a magazine article, with a very large headline and a big photo running off the edge. Presents the doctor as a confident expert.</p>
+        <div class="meta">
+          <div><b>Colours</b>
+            <span class="sw"><span style="background:#F4F1EC"></span><span style="background:#141414"></span><span style="background:#1F4D3F"></span></span>
+          </div>
+          <div><b>Fonts</b> Playfair Display + Inter</div>
+        </div>
+        <a class="open" href="02-editorial/index.html">
+          Open this design
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- 03 -->
+    <article class="style">
+      <div class="thumb t3" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="blk h"></span><span class="blk h2"></span>
+        <span class="blk p"></span><span class="dot"></span>
+        <span class="blk img"></span>
+      </div>
+      <div class="style__body">
+        <p class="style__no">03</p>
+        <h3>Japandi</h3>
+        <p class="style__desc">Japanese calm mixed with Scandinavian simplicity. Soft beige, rounded corners, gentle colours and a lot of empty space. The quietest of the five.</p>
+        <div class="meta">
+          <div><b>Colours</b>
+            <span class="sw"><span style="background:#EFE9E1"></span><span style="background:#8A8580"></span><span style="background:#6B7F6E"></span></span>
+          </div>
+          <div><b>Fonts</b> Jost</div>
+        </div>
+        <a class="open" href="03-japandi/index.html">
+          Open this design
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- 04 -->
+    <article class="style">
+      <div class="thumb t4" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="blk h"></span><span class="blk h2"></span>
+        <span class="blk p"></span>
+        <span class="blk img"></span>
+        <span class="wave"></span>
+      </div>
+      <div class="style__body">
+        <p class="style__no">04</p>
+        <h3>Organic / Natural</h3>
+        <p class="style__desc">Warm sand and green, with curved wave dividers, a blob-shaped photo and leaf drawings. Feels like a healing, wellness retreat.</p>
+        <div class="meta">
+          <div><b>Colours</b>
+            <span class="sw"><span style="background:#E9E2D0"></span><span style="background:#A3B18A"></span><span style="background:#2F4F3E"></span></span>
+          </div>
+          <div><b>Fonts</b> Fraunces + Nunito Sans</div>
+        </div>
+        <a class="open" href="04-organic-natural/index.html">
+          Open this design
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- 05 -->
+    <article class="style">
+      <div class="thumb t5" aria-hidden="true">
+        <span class="cl cl1"></span><span class="cl cl2"></span>
+        <span class="bar"></span>
+        <span class="g g1"></span><span class="g g2"></span>
+        <span class="g g3"></span><span class="g g4"></span><span class="g g5"></span>
+      </div>
+      <div class="style__body">
+        <p class="style__no">05</p>
+        <h3>Glass + Bento Grid</h3>
+        <p class="style__desc">Frosted glass boxes of different sizes on a soft mint background. Modern and fresh, like a well-made app.</p>
+        <div class="meta">
+          <div><b>Colours</b>
+            <span class="sw"><span style="background:#E6F4F1"></span><span style="background:#BFE3DC"></span><span style="background:#12564B"></span></span>
+          </div>
+          <div><b>Fonts</b> Plus Jakarta Sans</div>
+        </div>
+        <a class="open" href="05-glass-bento/index.html">
+          Open this design
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- 06 -->
+    <article class="style">
+      <div class="thumb t6" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="blk h"></span><span class="blk h2"></span>
+        <span class="blk r"></span>
+        <span class="blk img"></span><span class="gl"></span>
+        <span class="tl tl1"></span><span class="tl tl2"></span><span class="tl tl3"></span>
+      </div>
+      <div class="style__body">
+        <p class="style__no">06</p>
+        <h3>Atelier Luxury</h3>
+        <p class="style__desc">Ivory and charcoal with bronze detailing, laid out like a fine catalogue. A band of light sweeps across each picture as you pass over it.</p>
+        <div class="meta">
+          <div><b>Colours</b>
+            <span class="sw"><span style="background:#F6F3EE"></span><span style="background:#232120"></span><span style="background:#A87E4F"></span></span>
+          </div>
+          <div><b>Fonts</b> Cormorant Garamond + Inter</div>
+        </div>
+        <a class="open" href="06-atelier/index.html">
+          Open this design
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- 07 -->
+    <article class="style">
+      <div class="thumb t7" aria-hidden="true">
+        <span class="bar"></span><span class="pill"></span>
+        <span class="blk h"></span><span class="blk h2"></span><span class="pl"></span>
+        <span class="blk img"></span>
+        <span class="sc"></span>
+        <span class="cd cd1"></span><span class="cd cd2"></span><span class="cd cd3"></span>
+      </div>
+      <div class="style__body">
+        <p class="style__no">07</p>
+        <h3>Warm Care</h3>
+        <p class="style__desc">Terracotta and cream with big rounded cards and a friendly, modern healthcare feel. The most approachable of the seven.</p>
+        <div class="meta">
+          <div><b>Colours</b>
+            <span class="sw"><span style="background:#FDFBF6"></span><span style="background:#E76943"></span><span style="background:#245B33"></span></span>
+          </div>
+          <div><b>Fonts</b> Fraunces + Inter</div>
+        </div>
+        <a class="open" href="07-warm-care/index.html">
+          Open this design
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <h2>Details still needed</h2>
+    <ul>
+      <li>WhatsApp number, clinic address and consultation timings</li>
+      <li>One-line introduction and a short bio from the doctor</li>
+      <li>Google review link, Google Maps link, Instagram and Facebook links</li>
+      <li>Holiday notice date</li>
+      <li>A photo of the doctor, saved as <code>assets/img/doctor.jpg</code></li>
+      <li>Three testimonials (no names, month and year only)</li>
+    </ul>
+    <p>
+      Until these arrive, every missing detail is shown in brackets, for example
+      <code>[ADDRESS]</code>, so that nothing gets forgotten. The moment
+      <code>doctor.jpg</code> is added to the <code>assets/img</code> folder, the photo
+      appears in all five designs on its own &mdash; no other change is needed.
+    </p>
+    <p>
+      These are design samples for review only. None of the pages are live on the internet.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

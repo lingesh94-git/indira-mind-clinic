@@ -1,0 +1,12 @@
+# Competitor reference material — must never be published
+amaha screenshots/
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+
+# Never commit secrets
+.env
+.env.*

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indira Mind Clinic — Dr. V. U. Karthikeyan, MD (Psychiatry)</title>
+<meta name="description" content="Indira Mind Clinic — Dr. V. U. Karthikeyan, MD (Psychiatry). General awareness information and consultation details.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+/* ============ Organic / Natural — design tokens ============ */
+:root{
+  --sand:#E9E2D0;        /* main background */
+  --cream:#F5F1E6;       /* lighter panel */
+  --sage:#A3B18A;        /* accent */
+  --sage-soft:#C4CEB2;
+  --forest:#2F4F3E;      /* deep green */
+  --forest-2:#24402F;
+  --ink:#32372E;
+  --muted:#5F6657;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --r-xl:34px;
+  --r-lg:24px;
+  --shell:1160px;
+  --gutter:clamp(22px,5vw,60px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--sand);color:var(--ink);
+  font-family:var(--sans);font-size:17px;font-weight:300;
+  line-height:1.82;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.shell{width:100%;max-width:var(--shell);margin-inline:auto;padding-inline:var(--gutter);
+  position:relative;z-index:2}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:99;background:var(--forest);color:var(--cream);
+  padding:14px 22px;font-size:15px;border-radius:0 0 var(--r-lg) 0}
+.skip:focus{left:0}
+:focus-visible{outline:2px solid var(--forest);outline-offset:4px;border-radius:6px}
+
+.label{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--sage);margin:0}
+.band--forest .label{color:var(--sage-soft)}
+
+/* placeholder chips */
+.ph{color:var(--forest);background:rgba(163,177,138,.3);border-radius:999px;
+  padding:2px 12px;font-size:.92em;font-weight:400;display:inline-block;line-height:1.6}
+.band--forest .ph{color:#EAF0E2;background:rgba(196,206,178,.2)}
+
+/* ============ holiday banner ============ */
+.holiday{position:relative;z-index:3;background:var(--forest);color:#E7EFE3;text-align:center;
+  font-size:14px;letter-spacing:.08em;padding:12px 20px}
+
+/* ============ header ============ */
+.masthead{position:sticky;top:0;z-index:40;background:rgba(233,226,208,.92);
+  backdrop-filter:blur(10px) saturate(120%)}
+.masthead__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:86px}
+
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;flex-shrink:0}
+.brand__mark{width:22px;height:50px;flex:none;
+  background-image:url("../../assets/img/logo.png");
+  background-repeat:no-repeat;background-size:55.2px 76.7px;background-position:-14.2px -5.4px}
+.brand__name{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:.04em;
+  color:var(--forest);line-height:1}
+.brand__sub{display:block;font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--muted);margin-top:5px;font-weight:600}
+
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:15px;font-weight:400;color:var(--muted);
+  padding:8px 0;transition:color .45s ease}
+.nav a:hover,.nav a:focus-visible{color:var(--forest)}
+.nav .lang{color:var(--forest);font-weight:600}
+
+.menu-btn{display:none;background:var(--cream);border:none;border-radius:50%;
+  width:46px;height:46px;cursor:pointer;color:var(--forest);
+  align-items:center;justify-content:center;padding:0}
+.menu-btn svg{width:20px;height:20px}
+
+/* ============ wave dividers ============ */
+.wave{display:block;line-height:0;position:relative;z-index:2}
+.wave svg{display:block;width:100%;height:clamp(42px,6vw,88px)}
+.wave--sand{background:var(--sand)}
+.wave--cream{background:var(--cream)}
+.wave--forest{background:var(--forest)}
+
+/* ============ floating leaf line-art ============ */
+.leaf{position:absolute;color:var(--sage);opacity:.34;pointer-events:none;z-index:1;
+  will-change:transform}
+.band--forest .leaf{color:var(--sage-soft);opacity:.2}
+.leaf svg{width:100%;height:100%;display:block}
+.leaf--a{width:clamp(110px,15vw,210px);aspect-ratio:1;right:-40px;top:8%}
+.leaf--b{width:clamp(90px,11vw,150px);aspect-ratio:1;left:-34px;bottom:10%;transform:scaleX(-1)}
+.leaf--c{width:clamp(80px,9vw,130px);aspect-ratio:1;right:4%;bottom:6%}
+
+/* ============ hero ============ */
+.hero{padding:clamp(52px,8vw,110px) 0 clamp(46px,7vw,92px);position:relative;overflow:hidden}
+.hero__grid{display:grid;grid-template-columns:1fr .82fr;gap:clamp(40px,6vw,88px);align-items:center}
+
+h1{font-family:var(--serif);font-size:clamp(40px,5.8vw,68px);font-weight:600;
+  line-height:1.1;letter-spacing:-.01em;margin:18px 0 0;color:var(--forest)}
+.hero__cred{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+  margin:18px 0 0;font-weight:600}
+.hero__intro{font-size:clamp(17.5px,2vw,20px);line-height:1.9;color:var(--muted);
+  margin:26px 0 0;max-width:30em}
+.hero__cta{margin-top:clamp(30px,4vw,44px);display:flex;flex-wrap:wrap;gap:14px}
+
+/* blob-shaped portrait — the signature of this style */
+.portrait{
+  position:relative;aspect-ratio:1/1.12;
+  background-color:var(--sage-soft);background-size:cover;background-position:center 20%;
+  background-repeat:no-repeat;
+  border-radius:58% 42% 46% 54% / 44% 50% 50% 56%;
+  animation:blob 26s ease-in-out infinite;
+  box-shadow:0 20px 50px rgba(47,79,62,.1);
+}
+@keyframes blob{
+  0%,100%{border-radius:58% 42% 46% 54% / 44% 50% 50% 56%}
+  33%{border-radius:46% 54% 58% 42% / 52% 44% 56% 48%}
+  66%{border-radius:52% 48% 42% 58% / 48% 56% 44% 52%}
+}
+.portrait__ph{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:16px;text-align:center;padding:30px}
+.portrait__ph svg{width:44px;height:44px;color:var(--forest);opacity:.45}
+.portrait__ph span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--forest);opacity:.7;font-weight:600}
+.portrait.has-photo .portrait__ph{display:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;
+  min-height:54px;padding:0 32px;border-radius:999px;
+  font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.02em;
+  text-decoration:none;background:var(--forest);color:var(--cream);border:2px solid var(--forest);
+  transition:background .45s ease,color .45s ease,transform .45s cubic-bezier(.2,.7,.3,1)}
+.btn:hover,.btn:focus-visible{background:var(--forest-2);border-color:var(--forest-2);transform:translateY(-3px)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn--quiet{background:transparent;color:var(--forest);border-color:var(--sage)}
+.btn--quiet:hover,.btn--quiet:focus-visible{background:var(--sage);border-color:var(--sage);color:var(--forest)}
+.band--forest .btn--quiet{color:var(--cream);border-color:var(--sage)}
+.band--forest .btn--quiet:hover,.band--forest .btn--quiet:focus-visible{background:var(--sage);color:var(--forest)}
+
+/* ============ sections ============ */
+.band{padding:clamp(56px,8vw,106px) 0;position:relative;overflow:hidden}
+.band--cream{background:var(--cream)}
+.band--sand{background:var(--sand)}
+.band--forest{background:var(--forest);color:#E7EFE3}
+
+.sec-head{text-align:center;max-width:40em;margin:0 auto clamp(42px,5.2vw,68px)}
+.sec-head .label{margin-bottom:18px}
+h2{font-family:var(--serif);font-size:clamp(29px,3.9vw,46px);font-weight:600;
+  line-height:1.18;letter-spacing:-.008em;margin:0;color:var(--forest)}
+.band--forest h2{color:#F1F6EC}
+
+/* about */
+.about{max-width:34em;margin:0 auto;text-align:center}
+.about__body{font-size:19px;line-height:1.95;color:var(--muted);margin:0}
+.about__more{margin-top:34px}
+
+/* conditions — rounded cards with a leaf mark */
+.conditions{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,28px)}
+.condition{background:var(--cream);border-radius:var(--r-xl);padding:clamp(28px,3.2vw,40px);
+  transition:transform .5s cubic-bezier(.2,.7,.3,1),box-shadow .5s ease}
+.band--cream .condition{background:var(--sand)}
+.condition:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(47,79,62,.09)}
+.condition__leaf{width:48px;height:48px;border-radius:50%;background:rgba(163,177,138,.32);
+  display:flex;align-items:center;justify-content:center;margin-bottom:22px;color:var(--forest)}
+.condition__leaf svg{width:24px;height:24px}
+.condition h3{font-family:var(--serif);font-size:23px;font-weight:600;margin:0 0 10px;color:var(--forest)}
+.condition p{margin:0;font-size:16px;color:var(--muted);line-height:1.75}
+.after{text-align:center;margin:clamp(38px,4.6vw,56px) 0 0}
+
+/* videos */
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.6vw,32px)}
+.video__thumb{position:relative;aspect-ratio:16/10;background:rgba(163,177,138,.3);
+  border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;
+  transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+.video:hover .video__thumb{transform:translateY(-4px)}
+.video__play{width:58px;height:58px;border-radius:50%;background:var(--cream);
+  display:flex;align-items:center;justify-content:center;color:var(--forest);
+  transition:transform .45s cubic-bezier(.2,.7,.3,1)}
+.video:hover .video__play{transform:scale(1.07)}
+.video__play svg{width:18px;height:18px;margin-left:3px}
+.video h3{font-family:var(--serif);font-size:19px;font-weight:500;margin:20px 0 6px;
+  line-height:1.4;color:var(--forest)}
+.video .label{font-size:11px}
+.videos__more{text-align:center;margin-top:clamp(40px,4.8vw,58px)}
+
+/* testimonials — on the deep green band */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,2.8vw,34px)}
+.quote{margin:0;background:rgba(241,246,236,.07);border-radius:var(--r-xl);
+  padding:clamp(28px,3.2vw,40px);text-align:center}
+.quote__leaf{width:40px;height:40px;margin:0 auto 20px;color:var(--sage-soft);opacity:.85}
+.quote__leaf svg{width:100%;height:100%}
+.quote p{font-family:var(--serif);font-size:19px;line-height:1.7;color:#EAF0E2;
+  margin:0 0 20px;font-weight:400}
+.quote cite{font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage-soft)}
+.quotes__foot{text-align:center;margin-top:clamp(38px,4.4vw,54px)}
+.link-q{font-size:15px;color:#EAF0E2;text-decoration:none;font-weight:600;
+  border-bottom:2px solid var(--sage);padding-bottom:4px;transition:color .45s ease}
+.link-q:hover,.link-q:focus-visible{color:var(--sage-soft)}
+.band--cream .link-q,.band--sand .link-q{color:var(--forest)}
+.sample-note{font-size:13px;color:var(--sage-soft);margin:14px 0 0;opacity:.9}
+
+/* location */
+.location{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(34px,5vw,70px);align-items:center}
+.facts{margin:clamp(26px,3.2vw,38px) 0 0;padding:0}
+.facts div+div{margin-top:24px;padding-top:24px;border-top:2px dotted rgba(163,177,138,.6)}
+.facts dt{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--sage);
+  margin-bottom:9px;font-weight:600}
+.facts dd{margin:0;font-size:17px;line-height:1.8;color:var(--ink)}
+.map{aspect-ratio:16/12;background:var(--cream);border-radius:var(--r-xl);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:14px;text-align:center;padding:26px}
+.map svg{width:38px;height:38px;color:var(--sage)}
+.map span{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* ============ footer ============ */
+.footer{position:relative;z-index:2;background:var(--forest);color:#C3CFBC;
+  padding:clamp(52px,6.5vw,88px) 0 0;overflow:hidden}
+.footer a{color:#C3CFBC;text-decoration:none;transition:color .45s ease}
+.footer a:hover,.footer a:focus-visible{color:#F1F6EC}
+.footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(32px,4.4vw,64px);
+  padding-bottom:clamp(42px,5.2vw,68px)}
+.footer__logo{width:76px;height:auto;filter:brightness(0) invert(1);opacity:.8}
+.footer__about{margin:22px 0 0;font-size:15px;line-height:1.85;color:#95A390;max-width:30ch}
+.footer h4{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--sage-soft);
+  margin:0 0 20px;font-weight:600}
+.footer ul{list-style:none;margin:0;padding:0}
+.footer li+li{margin-top:12px}
+.footer li,.footer li a{font-size:15px}
+.social{display:flex;gap:12px;margin-top:26px}
+.social a{width:44px;height:44px;border-radius:50%;background:rgba(241,246,236,.09);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .45s ease,transform .45s cubic-bezier(.2,.7,.3,1)}
+.social a:hover,.social a:focus-visible{background:rgba(241,246,236,.2);transform:translateY(-3px)}
+.social svg{width:17px;height:17px}
+.footer__base{border-top:1px solid rgba(195,207,188,.2);padding:26px 0 38px;
+  display:flex;flex-wrap:wrap;gap:14px 34px;justify-content:space-between;align-items:center;
+  font-size:13.5px;color:#8D9B89;line-height:1.8}
+.footer__base p{margin:0;max-width:62ch}
+
+/* floating WhatsApp */
+.wa{position:fixed;right:clamp(16px,2.6vw,30px);bottom:clamp(16px,2.6vw,30px);z-index:50;
+  width:62px;height:62px;border-radius:50%;background:var(--forest);color:var(--cream);
+  display:flex;align-items:center;justify-content:center;text-decoration:none;
+  box-shadow:0 14px 34px rgba(47,79,62,.26);
+  transition:transform .5s cubic-bezier(.2,.7,.3,1),background .45s ease}
+.wa:hover,.wa:focus-visible{transform:translateY(-4px);background:var(--forest-2)}
+.wa svg{width:30px;height:30px}
+
+.back{position:fixed;left:clamp(12px,2vw,22px);bottom:clamp(16px,2.6vw,30px);z-index:50;
+  background:var(--cream);border-radius:999px;font-size:12px;letter-spacing:.06em;font-weight:600;
+  color:var(--forest);text-decoration:none;padding:12px 20px;min-height:44px;
+  display:inline-flex;align-items:center;box-shadow:0 8px 22px rgba(47,79,62,.12)}
+.back:hover,.back:focus-visible{background:#fff}
+
+/* ============ reveal ============ */
+.reveal{opacity:0;transform:translateY(22px);
+  transition:opacity .9s cubic-bezier(.2,.7,.3,1),transform .9s cubic-bezier(.2,.7,.3,1)}
+.reveal.is-in{opacity:1;transform:none}
+.reveal[data-d="1"]{transition-delay:.12s}
+.reveal[data-d="2"]{transition-delay:.24s}
+.reveal[data-d="3"]{transition-delay:.36s}
+
+/* ============ responsive ============ */
+@media (max-width:960px){
+  .hero__grid{grid-template-columns:1fr;gap:42px}
+  .hero__media{order:-1;max-width:360px;margin-inline:auto}
+  .location{grid-template-columns:1fr;gap:38px}
+  .footer__grid{grid-template-columns:1fr 1fr;gap:38px}
+  .footer__brand{grid-column:1/-1}
+  .leaf--a{right:-70px;top:4%}
+  .leaf--b{left:-60px}
+}
+@media (max-width:860px){
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;
+    align-items:flex-start;gap:0;background:var(--sand);
+    border-radius:0 0 var(--r-xl) var(--r-xl);padding:8px var(--gutter) 26px;
+    box-shadow:0 18px 40px rgba(47,79,62,.1)}
+  .nav.is-open{display:flex}
+  .nav a{width:100%;padding:15px 0;min-height:44px;border-bottom:1px solid rgba(163,177,138,.45)}
+  .menu-btn{display:flex}
+
+  .conditions{grid-template-columns:repeat(2,1fr)}
+  .videos{grid-template-columns:1fr;gap:30px;max-width:440px;margin-inline:auto}
+  .quotes{grid-template-columns:1fr;gap:20px}
+}
+@media (max-width:560px){
+  body{font-size:16.5px}
+  .masthead__inner{min-height:74px}
+  .brand__mark{width:18px;height:41px;background-size:45.3px 63px;background-position:-11.7px -4.4px}
+  .brand__name{font-size:20px}
+  .conditions{grid-template-columns:1fr}
+  .hero__cta{flex-direction:column;align-items:stretch}
+  .btn{width:100%;padding:0 20px}
+  .footer__grid{grid-template-columns:1fr}
+  .back{font-size:11px;padding:11px 14px}
+  .leaf--a,.leaf--b,.leaf--c{opacity:.2}
+}
+
+/* ============ reduced motion ============ */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;transition-delay:0ms!important;
+  }
+  .reveal{opacity:1;transform:none}
+  .portrait{animation:none}
+  .leaf{transform:none!important}
+  .leaf--b{transform:scaleX(-1)!important}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- reusable leaf line-art -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="leaf" viewBox="0 0 100 100">
+    <path d="M86 14C52 12 22 26 16 54c-3 15 4 27 14 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <path d="M86 14c4 34-10 62-38 70-15 4-27-2-33-12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <path d="M86 14 30 86" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M72 22 62 46M64 36 48 40M78 34 66 58M70 48 54 54M80 48 70 68M74 60 60 66" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<!-- ============ holiday banner ============ -->
+<div class="holiday">Clinic closed on <span class="ph">[DATE]</span></div>
+
+<!-- ============ header ============ -->
+<header class="masthead">
+  <div class="shell masthead__inner">
+    <a class="brand" href="#main" aria-label="Indira Mind Clinic — home">
+      <span class="brand__mark" role="img" aria-label="Indira Mind Clinic logo"></span>
+      <span>
+        <span class="brand__name">Indira</span>
+        <span class="brand__sub">Mind Clinic</span>
+      </span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#about">About Doctor</a>
+      <a href="#conditions">Conditions</a>
+      <a href="#videos">Videos</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#location">Contact</a>
+      <a class="lang" href="#">English / தமிழ்</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ hero ============ -->
+  <section class="hero">
+    <span class="leaf leaf--a" data-par="0.05" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+
+    <div class="shell hero__grid">
+      <div class="reveal">
+        <p class="label">Indira Mind Clinic</p>
+        <h1>Dr. V. U. Karthikeyan</h1>
+        <p class="hero__cred">MD (Psychiatry)</p>
+        <p class="hero__intro"><span class="ph">[One-line intro from doctor]</span></p>
+
+        <div class="hero__cta">
+          <a class="btn" href="https://wa.me/[NUMBER]?text=Hello%20Doctor%2C%20I%20would%20like%20to%20know%20about%20consultation%20timings." target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.9 2.4 1.02 2.56c.12.17 1.75 2.67 4.24 3.75.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+            Message on WhatsApp
+          </a>
+          <a class="btn btn--quiet" href="#conditions">Conditions treated</a>
+        </div>
+      </div>
+
+      <div class="hero__media reveal" data-d="1">
+        <div class="portrait" id="portrait">
+          <div class="portrait__ph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <circle cx="12" cy="8.5" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/>
+            </svg>
+            <span>Doctor photo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave wave--sand" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#F5F1E6" d="M0 44c180-38 360-38 540-6s360 44 540 12 300-30 360-24v64H0z"/></svg>
+  </div>
+
+  <!-- ============ about in brief ============ -->
+  <section class="band band--cream" id="about">
+    <span class="leaf leaf--b" data-par="0.04" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="label">About the doctor</p>
+        <h2>Care that begins with listening</h2>
+      </div>
+      <div class="about reveal" data-d="1">
+        <p class="about__body"><span class="ph">[2–3 lines bio]</span></p>
+        <p class="about__more"><a class="link-q" href="#">Read the full profile</a></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave wave--cream" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#E9E2D0" d="M0 30c220 42 420 42 640 10s420-40 560-14 180 26 240 22v42H0z"/></svg>
+  </div>
+
+  <!-- ============ conditions ============ -->
+  <section class="band band--sand" id="conditions">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="label">Areas of care</p>
+        <h2>Conditions we help with</h2>
+      </div>
+
+      <div class="conditions">
+        <article class="condition reveal">
+          <span class="condition__leaf" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+          <h3>Depression</h3>
+          <p>Low mood, loss of interest, and tiredness that stays for weeks.</p>
+        </article>
+        <article class="condition reveal" data-d="1">
+          <span class="condition__leaf" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+          <h3>Anxiety</h3>
+          <p>Constant worry, restlessness, or fear that gets in the way of daily life.</p>
+        </article>
+        <article class="condition reveal" data-d="2">
+          <span class="condition__leaf" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+          <h3>OCD</h3>
+          <p>Repeated unwanted thoughts and actions that are hard to stop.</p>
+        </article>
+        <article class="condition reveal">
+          <span class="condition__leaf" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+          <h3>Addiction</h3>
+          <p>Difficulty cutting down on alcohol, tobacco, or other substances.</p>
+        </article>
+        <article class="condition reveal" data-d="1">
+          <span class="condition__leaf" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+          <h3>Sleep Problems</h3>
+          <p>Trouble falling asleep, staying asleep, or waking up unrested.</p>
+        </article>
+        <article class="condition reveal" data-d="2">
+          <span class="condition__leaf" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+          <h3>Stress</h3>
+          <p>Pressure from work, studies, or family that feels hard to carry alone.</p>
+        </article>
+      </div>
+
+      <p class="after reveal" data-d="2"><a class="link-q" href="#">All conditions</a></p>
+    </div>
+  </section>
+
+  <div class="wave wave--sand" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#F5F1E6" d="M0 52c160-34 320-44 480-20s320 46 480 22 300-32 480-18v54H0z"/></svg>
+  </div>
+
+  <!-- ============ videos ============ -->
+  <section class="band band--cream" id="videos">
+    <span class="leaf leaf--c" data-par="0.06" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="label">In the doctor&rsquo;s words</p>
+        <h2>Videos on mental health</h2>
+      </div>
+
+      <div class="videos">
+        <article class="video reveal">
+          <div class="video__thumb"><span class="video__play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+          <h3><span class="ph">[Video title]</span></h3>
+          <p class="label">Depression</p>
+        </article>
+        <article class="video reveal" data-d="1">
+          <div class="video__thumb"><span class="video__play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+          <h3><span class="ph">[Video title]</span></h3>
+          <p class="label">Anxiety</p>
+        </article>
+        <article class="video reveal" data-d="2">
+          <div class="video__thumb"><span class="video__play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+          <h3><span class="ph">[Video title]</span></h3>
+          <p class="label">Sleep</p>
+        </article>
+      </div>
+
+      <p class="videos__more reveal" data-d="2">
+        <a class="btn btn--quiet" href="https://www.youtube.com/@dr.v.u.karthikeyanmdpsychiatry" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="wave wave--cream" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#2F4F3E" d="M0 40c200 40 400 40 600 8s400-38 540-12 240 28 300 24v30H0z"/></svg>
+  </div>
+
+  <!-- ============ testimonials — anonymous ============ -->
+  <section class="band band--forest" id="testimonials">
+    <span class="leaf leaf--a" data-par="0.05" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="label">In their words</p>
+        <h2>What patients share</h2>
+      </div>
+
+      <div class="quotes">
+        <blockquote class="quote reveal">
+          <span class="quote__leaf" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+          <p><span class="ph">[Testimonial 1 — to be supplied]</span></p>
+          <cite>&mdash; Patient, <span class="ph">[Month Year]</span></cite>
+        </blockquote>
+        <blockquote class="quote reveal" data-d="1">
+          <span class="quote__leaf" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+          <p><span class="ph">[Testimonial 2 — to be supplied]</span></p>
+          <cite>&mdash; Patient, <span class="ph">[Month Year]</span></cite>
+        </blockquote>
+        <blockquote class="quote reveal" data-d="2">
+          <span class="quote__leaf" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+          <p><span class="ph">[Testimonial 3 — to be supplied]</span></p>
+          <cite>&mdash; Patient, <span class="ph">[Month Year]</span></cite>
+        </blockquote>
+      </div>
+
+      <div class="quotes__foot reveal" data-d="2">
+        <a class="link-q" href="[GOOGLE REVIEW LINK]">Read our reviews on Google</a>
+        <p class="sample-note">Placeholders only &mdash; real testimonials to be supplied and approved by the doctor.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave wave--forest" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#E9E2D0" d="M0 46c180 36 380 36 560 6s380-36 520-12 260 26 360 22v28H0z"/></svg>
+  </div>
+
+  <!-- ============ location ============ -->
+  <section class="band band--sand" id="location">
+    <div class="shell location">
+      <div class="reveal">
+        <p class="label">Visit us</p>
+        <h2>Clinic location</h2>
+        <dl class="facts">
+          <div>
+            <dt>Address</dt>
+            <dd><span class="ph">[ADDRESS]</span></dd>
+          </div>
+          <div>
+            <dt>Consultation timings</dt>
+            <dd><span class="ph">[TIMINGS]</span></dd>
+          </div>
+          <div>
+            <dt>Appointments</dt>
+            <dd>Please send a message on WhatsApp and we will confirm a time for you.</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="map reveal" data-d="1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+          <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span>Map &mdash; [GOOGLE MAPS EMBED]</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="wave wave--sand" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#2F4F3E" d="M0 38c220 44 420 44 640 12s420-42 560-16 180 28 240 24v32H0z"/></svg>
+</div>
+
+<!-- ============ footer ============ -->
+<footer class="footer">
+  <span class="leaf leaf--b" data-par="0.03" aria-hidden="true"><svg><use href="#leaf"/></svg></span>
+  <div class="shell footer__grid">
+    <div class="footer__brand">
+      <img class="footer__logo" src="../../assets/img/logo.png" alt="Indira Mind Clinic" width="76" height="106" loading="lazy">
+      <p class="footer__about">Dr. V. U. Karthikeyan, MD (Psychiatry) &mdash; Indira Mind Clinic.</p>
+      <div class="social">
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1Z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@dr.v.u.karthikeyanmdpsychiatry" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#about">About Doctor</a></li>
+        <li><a href="#conditions">Conditions</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#location">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Clinic</h4>
+      <ul>
+        <li><span class="ph">[ADDRESS]</span></li>
+        <li><span class="ph">[TIMINGS]</span></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="shell footer__base">
+    <p>Information on this website is for general awareness and is not a substitute for medical consultation.</p>
+    <p>&copy; 2026 Indira Mind Clinic</p>
+  </div>
+</footer>
+
+<!-- floating WhatsApp -->
+<a class="wa" href="https://wa.me/[NUMBER]?text=Hello%20Doctor%2C%20I%20would%20like%20to%20know%20about%20consultation%20timings." target="_blank" rel="noopener noreferrer" aria-label="Message the clinic on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.9 2.4 1.02 2.56c.12.17 1.75 2.67 4.24 3.75.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+</a>
+
+<a class="back" href="../index.html">&larr; All styles</a>
+
+<script>
+(function(){
+  "use strict";
+
+  /* --- mobile menu --- */
+  var btn = document.getElementById("menuBtn");
+  var nav = document.getElementById("nav");
+
+  btn.addEventListener("click", function(){
+    var open = nav.classList.toggle("is-open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+
+  nav.addEventListener("click", function(e){
+    if (e.target.tagName === "A" && nav.classList.contains("is-open")) {
+      nav.classList.remove("is-open");
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-label", "Open menu");
+    }
+  });
+
+  /* --- doctor photo: show it only if the file actually exists --- */
+  var portrait = document.getElementById("portrait");
+  var probe = new Image();
+  probe.onload = function(){
+    portrait.style.backgroundImage = 'url("../../assets/img/doctor.jpg")';
+    portrait.classList.add("has-photo");
+  };
+  probe.src = "../../assets/img/doctor.jpg";
+
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* --- reveal on scroll --- */
+  var items = document.querySelectorAll(".reveal");
+
+  if (reduce || !("IntersectionObserver" in window)) {
+    Array.prototype.forEach.call(items, function(el){ el.classList.add("is-in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -7% 0px" });
+
+    Array.prototype.forEach.call(items, function(el){ io.observe(el); });
+  }
+
+  /* --- gentle parallax on the leaf line-art --- */
+  if (reduce) return;
+
+  var leaves = Array.prototype.slice.call(document.querySelectorAll("[data-par]"));
+  if (!leaves.length) return;
+
+  var ticking = false;
+
+  var paint = function(){
+    ticking = false;
+    var mid = window.innerHeight / 2;
+    leaves.forEach(function(el){
+      var rect = el.getBoundingClientRect();
+      /* skip anything far off screen, so we do no needless work */
+      if (rect.bottom < -400 || rect.top > window.innerHeight + 400) return;
+      var speed = parseFloat(el.getAttribute("data-par")) || 0.04;
+      var shift = (rect.top + rect.height / 2 - mid) * speed;
+      var flip = el.classList.contains("leaf--b") ? " scaleX(-1)" : "";
+      el.style.transform = "translate3d(0," + shift.toFixed(1) + "px,0)" + flip;
+    });
+  };
+
+  var onScroll = function(){
+    if (!ticking) { ticking = true; window.requestAnimationFrame(paint); }
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  paint();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indira Mind Clinic — Dr. V. U. Karthikeyan, MD (Psychiatry)</title>
+<meta name="description" content="Indira Mind Clinic — Dr. V. U. Karthikeyan, MD (Psychiatry). General awareness information and consultation details.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Noto+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* ============ Japandi — design tokens ============ */
+:root{
+  --beige:#EFE9E1;       /* warm paper */
+  --beige-2:#F6F2EC;     /* lighter panel */
+  --beige-3:#E5DDD2;     /* soft shadow tone */
+  --clay:#DCD2C5;        /* wood / clay edge */
+  --stone:#8A8580;       /* stone grey */
+  --green:#6B7F6E;       /* muted green */
+  --green-deep:#4F6154;  /* muted green, darker for text */
+  --ink:#3D3A35;
+  --muted:#6E6A63;
+  --sans:"Jost","Noto Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --r-lg:26px;
+  --r-md:18px;
+  --shell:1120px;
+  --gutter:clamp(22px,5vw,60px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--beige);color:var(--ink);
+  font-family:var(--sans);font-size:17px;font-weight:300;
+  line-height:1.85;letter-spacing:.012em;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* subtle paper grain over the whole page */
+body::before{
+  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.shell{width:100%;max-width:var(--shell);margin-inline:auto;padding-inline:var(--gutter);position:relative;z-index:2}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:99;background:var(--green-deep);color:var(--beige-2);
+  padding:14px 22px;font-size:15px;border-radius:0 0 var(--r-md) 0}
+.skip:focus{left:0}
+:focus-visible{outline:2px solid var(--green);outline-offset:4px;border-radius:4px}
+
+/* quiet section label */
+.label{
+  font-size:12px;font-weight:400;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--stone);margin:0;
+}
+
+/* placeholder chips — soft, never shouty */
+.ph{
+  color:var(--green-deep);background:rgba(107,127,110,.12);
+  border-radius:999px;padding:2px 12px;font-size:.92em;font-weight:400;
+  display:inline-block;line-height:1.6;
+}
+
+/* ============ holiday banner ============ */
+.holiday{
+  position:relative;z-index:2;
+  background:var(--clay);color:var(--ink);text-align:center;
+  font-size:14px;letter-spacing:.1em;padding:12px 20px;font-weight:400;
+}
+
+/* ============ header ============ */
+.masthead{
+  position:sticky;top:0;z-index:40;
+  background:rgba(239,233,225,.9);backdrop-filter:blur(10px) saturate(120%);
+}
+.masthead__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px}
+
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;flex-shrink:0}
+.brand__mark{
+  width:22px;height:50px;flex:none;
+  background-image:url("../../assets/img/logo.png");
+  background-repeat:no-repeat;background-size:55.2px 76.7px;background-position:-14.2px -5.4px;
+  filter:saturate(.55) opacity(.9);
+}
+.brand__name{font-size:21px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink);line-height:1}
+.brand__sub{display:block;font-size:10px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--stone);margin-top:6px;font-weight:300}
+
+.nav{display:flex;align-items:center;gap:34px}
+.nav a{text-decoration:none;font-size:15px;font-weight:300;letter-spacing:.06em;
+  color:var(--muted);padding:6px 0;transition:color .5s ease}
+.nav a:hover,.nav a:focus-visible{color:var(--green-deep)}
+.nav .lang{color:var(--green-deep);font-weight:400}
+
+.menu-btn{display:none;background:var(--beige-2);border:none;border-radius:50%;
+  width:46px;height:46px;cursor:pointer;color:var(--ink);
+  align-items:center;justify-content:center;padding:0}
+.menu-btn svg{width:20px;height:20px}
+
+/* ============ hero ============ */
+.hero{padding:clamp(56px,9vw,120px) 0 clamp(52px,8vw,110px)}
+.hero__grid{display:grid;grid-template-columns:1fr .78fr;gap:clamp(44px,7vw,100px);align-items:center}
+
+h1{
+  font-size:clamp(38px,5.4vw,62px);font-weight:300;line-height:1.16;
+  letter-spacing:-.005em;margin:20px 0 0;color:var(--ink);
+}
+.hero__cred{font-size:14px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--stone);margin:20px 0 0;font-weight:400}
+.hero__intro{font-size:clamp(17.5px,2vw,20px);line-height:1.9;color:var(--muted);
+  margin:28px 0 0;max-width:30em}
+.hero__cta{margin-top:clamp(30px,4vw,44px);display:flex;flex-wrap:wrap;gap:14px}
+
+/* portrait in a soft arch — the quiet signature of this style */
+.portrait{
+  position:relative;aspect-ratio:3/4;
+  background-color:var(--beige-3);background-size:cover;background-position:center 20%;
+  background-repeat:no-repeat;
+  border-radius:50% 50% var(--r-lg) var(--r-lg) / 34% 34% var(--r-lg) var(--r-lg);
+  overflow:hidden;
+}
+.portrait__ph{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:16px;text-align:center;padding:28px}
+.portrait__ph svg{width:44px;height:44px;color:var(--stone);opacity:.55}
+.portrait__ph span{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--stone)}
+.portrait.has-photo .portrait__ph{display:none}
+
+/* buttons — soft pills, no hard edges anywhere */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:11px;
+  min-height:54px;padding:0 32px;border-radius:999px;
+  font-family:var(--sans);font-size:15px;font-weight:400;letter-spacing:.06em;
+  text-decoration:none;background:var(--green-deep);color:var(--beige-2);
+  border:1px solid var(--green-deep);
+  transition:background .5s ease,color .5s ease,transform .5s cubic-bezier(.2,.7,.3,1);
+}
+.btn:hover,.btn:focus-visible{background:var(--green);border-color:var(--green);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn--quiet{background:transparent;color:var(--ink);border-color:var(--clay)}
+.btn--quiet:hover,.btn--quiet:focus-visible{background:var(--beige-2);border-color:var(--stone);color:var(--ink)}
+
+/* ============ sections ============ */
+.band{padding:clamp(62px,9vw,124px) 0;position:relative}
+.band--panel{background:var(--beige-2)}
+.band--panel::before,.band--panel::after{
+  content:"";position:absolute;left:0;right:0;height:1px;background:var(--clay);opacity:.7;
+}
+.band--panel::before{top:0}
+.band--panel::after{bottom:0}
+
+.sec-head{text-align:center;max-width:40em;margin:0 auto clamp(44px,5.5vw,72px)}
+.sec-head .label{margin-bottom:20px}
+h2{font-size:clamp(28px,3.6vw,42px);font-weight:300;line-height:1.28;
+  letter-spacing:-.005em;margin:0;color:var(--ink)}
+.sec-head p{margin:20px 0 0;color:var(--muted);font-size:17px}
+
+/* about */
+.about{max-width:34em;margin:0 auto;text-align:center}
+.about__body{font-size:19px;line-height:1.95;color:var(--muted);margin:0}
+.about__more{margin-top:34px}
+
+/* conditions — soft tiles, no borders, just a tone shift */
+.conditions{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2vw,26px)}
+.condition{
+  background:var(--beige);border-radius:var(--r-lg);
+  padding:clamp(28px,3.2vw,40px);
+  transition:transform .55s cubic-bezier(.2,.7,.3,1),box-shadow .55s ease;
+}
+.band--panel .condition{background:var(--beige)}
+.condition:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(61,58,53,.055)}
+.condition__dot{
+  width:38px;height:38px;border-radius:50%;background:rgba(107,127,110,.14);
+  display:flex;align-items:center;justify-content:center;margin-bottom:22px;
+}
+.condition__dot span{width:9px;height:9px;border-radius:50%;background:var(--green)}
+.condition h3{font-size:21px;font-weight:400;letter-spacing:.02em;margin:0 0 10px;color:var(--ink)}
+.condition p{margin:0;font-size:16px;color:var(--muted);line-height:1.75}
+.after{text-align:center;margin:clamp(38px,4.6vw,56px) 0 0}
+
+/* videos */
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.6vw,32px)}
+.video__thumb{
+  position:relative;aspect-ratio:16/10;background:var(--beige-3);
+  border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;
+  transition:transform .55s cubic-bezier(.2,.7,.3,1);
+}
+.video:hover .video__thumb{transform:translateY(-2px)}
+.video__play{width:56px;height:56px;border-radius:50%;background:rgba(246,242,236,.85);
+  display:flex;align-items:center;justify-content:center;color:var(--green-deep);
+  transition:background .5s ease}
+.video:hover .video__play{background:var(--beige-2)}
+.video__play svg{width:17px;height:17px;margin-left:3px}
+.video h3{font-size:18px;font-weight:400;margin:20px 0 6px;line-height:1.45;color:var(--ink)}
+.video .label{font-size:11px}
+.videos__more{text-align:center;margin-top:clamp(40px,4.8vw,58px)}
+
+/* testimonials — one quiet panel, three columns inside */
+.quotes{
+  background:var(--beige-2);border-radius:var(--r-lg);
+  padding:clamp(34px,4.6vw,62px);
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(30px,3.6vw,52px);
+}
+.band--panel .quotes{background:var(--beige)}
+.quote{margin:0;text-align:center;position:relative}
+.quote+.quote::before{
+  content:"";position:absolute;left:calc(-1 * clamp(15px,1.8vw,26px));top:8%;bottom:8%;
+  width:1px;background:var(--clay);
+}
+.quote__dot{width:6px;height:6px;border-radius:50%;background:var(--green);
+  margin:0 auto 20px;opacity:.7}
+.quote p{font-size:18px;line-height:1.85;color:var(--ink);margin:0 0 20px;font-weight:300}
+.quote cite{font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone)}
+.quotes__foot{text-align:center;margin-top:clamp(36px,4.4vw,54px)}
+.link-q{font-size:15px;color:var(--green-deep);text-decoration:none;
+  border-bottom:1px solid rgba(107,127,110,.4);padding-bottom:4px;transition:border-color .5s ease}
+.link-q:hover,.link-q:focus-visible{border-color:var(--green-deep)}
+.sample-note{font-size:13px;color:var(--stone);margin:14px 0 0}
+
+/* location */
+.location{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(34px,5vw,70px);align-items:center}
+.location h2{margin-bottom:0}
+.facts{margin:clamp(28px,3.4vw,40px) 0 0;padding:0}
+.facts div+div{margin-top:26px;padding-top:26px;border-top:1px solid var(--clay)}
+.facts dt{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--stone);margin-bottom:10px}
+.facts dd{margin:0;font-size:17px;line-height:1.8;color:var(--ink)}
+.map{
+  aspect-ratio:16/12;background:var(--beige-3);border-radius:var(--r-lg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:14px;text-align:center;padding:26px;
+}
+.map svg{width:36px;height:36px;color:var(--stone);opacity:.6}
+.map span{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--stone)}
+
+/* ============ footer ============ */
+.footer{position:relative;z-index:2;background:var(--clay);color:var(--ink);
+  padding:clamp(56px,7vw,92px) 0 0;border-radius:var(--r-lg) var(--r-lg) 0 0;margin-top:clamp(20px,3vw,40px)}
+.footer a{color:var(--ink);text-decoration:none;transition:color .45s ease}
+.footer a:hover,.footer a:focus-visible{color:var(--green-deep)}
+.footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(32px,4.4vw,64px);
+  padding-bottom:clamp(44px,5.4vw,70px)}
+.footer__logo{width:76px;height:auto;filter:saturate(.5) opacity(.75)}
+.footer__about{margin:22px 0 0;font-size:15px;line-height:1.85;color:var(--muted);max-width:30ch}
+.footer h4{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--stone);
+  margin:0 0 20px;font-weight:400}
+.footer ul{list-style:none;margin:0;padding:0}
+.footer li+li{margin-top:12px}
+.footer li,.footer li a{font-size:15px}
+.social{display:flex;gap:12px;margin-top:26px}
+.social a{width:44px;height:44px;border-radius:50%;background:rgba(246,242,236,.6);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .45s ease,transform .45s cubic-bezier(.2,.7,.3,1)}
+.social a:hover,.social a:focus-visible{background:var(--beige-2);transform:translateY(-2px)}
+.social svg{width:17px;height:17px}
+.footer__base{border-top:1px solid rgba(138,133,128,.3);padding:26px 0 38px;
+  display:flex;flex-wrap:wrap;gap:14px 34px;justify-content:space-between;align-items:center;
+  font-size:13.5px;color:var(--muted);line-height:1.8}
+.footer__base p{margin:0;max-width:62ch}
+
+/* floating WhatsApp */
+.wa{position:fixed;right:clamp(16px,2.6vw,30px);bottom:clamp(16px,2.6vw,30px);z-index:50;
+  width:60px;height:60px;border-radius:50%;background:var(--green-deep);color:var(--beige-2);
+  display:flex;align-items:center;justify-content:center;text-decoration:none;
+  box-shadow:0 12px 32px rgba(61,58,53,.18);
+  transition:transform .5s cubic-bezier(.2,.7,.3,1),background .45s ease}
+.wa:hover,.wa:focus-visible{transform:translateY(-3px);background:var(--green)}
+.wa svg{width:29px;height:29px}
+
+.back{position:fixed;left:clamp(12px,2vw,22px);bottom:clamp(16px,2.6vw,30px);z-index:50;
+  background:var(--beige-2);border-radius:999px;font-size:12px;letter-spacing:.1em;
+  color:var(--ink);text-decoration:none;padding:12px 20px;min-height:44px;
+  display:inline-flex;align-items:center;box-shadow:0 6px 20px rgba(61,58,53,.08)}
+.back:hover,.back:focus-visible{background:#fff}
+
+/* ============ reveal — fade only, nothing moves ============ */
+.reveal{opacity:0;transition:opacity 1.1s ease}
+.reveal.is-in{opacity:1}
+.reveal[data-d="1"]{transition-delay:.15s}
+.reveal[data-d="2"]{transition-delay:.3s}
+.reveal[data-d="3"]{transition-delay:.45s}
+
+/* ============ responsive ============ */
+@media (max-width:960px){
+  .hero__grid{grid-template-columns:1fr;gap:44px}
+  .hero__media{order:-1;max-width:380px;margin-inline:auto}
+  .location{grid-template-columns:1fr;gap:38px}
+  .footer__grid{grid-template-columns:1fr 1fr;gap:38px}
+  .footer__brand{grid-column:1/-1}
+}
+@media (max-width:860px){
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;
+    align-items:flex-start;gap:0;background:var(--beige);
+    border-radius:0 0 var(--r-lg) var(--r-lg);padding:8px var(--gutter) 26px;
+    box-shadow:0 18px 36px rgba(61,58,53,.08)}
+  .nav.is-open{display:flex}
+  .nav a{width:100%;padding:15px 0;min-height:44px;border-bottom:1px solid var(--clay)}
+  .menu-btn{display:flex}
+
+  .conditions{grid-template-columns:repeat(2,1fr)}
+  .videos{grid-template-columns:1fr;gap:30px;max-width:440px;margin-inline:auto}
+  .quotes{grid-template-columns:1fr;gap:34px}
+  .quote+.quote::before{left:0;right:0;top:calc(-1 * clamp(17px,1.8vw,26px));
+    bottom:auto;width:auto;height:1px}
+}
+@media (max-width:560px){
+  body{font-size:16.5px}
+  .masthead__inner{min-height:74px}
+  .brand__mark{width:18px;height:41px;background-size:45.3px 63px;background-position:-11.7px -4.4px}
+  .brand__name{font-size:18px}
+  .conditions{grid-template-columns:1fr}
+  .hero__cta{flex-direction:column;align-items:stretch}
+  .btn{width:100%;padding:0 20px}
+  .footer__grid{grid-template-columns:1fr}
+  .back{font-size:11px;padding:11px 14px}
+}
+
+/* ============ reduced motion ============ */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;transition-delay:0ms!important;
+  }
+  .reveal{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ holiday banner ============ -->
+<div class="holiday">Clinic closed on <span class="ph">[DATE]</span></div>
+
+<!-- ============ header ============ -->
+<header class="masthead">
+  <div class="shell masthead__inner">
+    <a class="brand" href="#main" aria-label="Indira Mind Clinic — home">
+      <span class="brand__mark" role="img" aria-label="Indira Mind Clinic logo"></span>
+      <span>
+        <span class="brand__name">Indira</span>
+        <span class="brand__sub">Mind Clinic</span>
+      </span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#about">About Doctor</a>
+      <a href="#conditions">Conditions</a>
+      <a href="#videos">Videos</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#location">Contact</a>
+      <a class="lang" href="#">English / தமிழ்</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ hero ============ -->
+  <section class="hero">
+    <div class="shell hero__grid">
+      <div class="reveal">
+        <p class="label">Indira Mind Clinic</p>
+        <h1>Dr. V. U. Karthikeyan</h1>
+        <p class="hero__cred">MD (Psychiatry)</p>
+        <p class="hero__intro"><span class="ph">[One-line intro from doctor]</span></p>
+
+        <div class="hero__cta">
+          <a class="btn" href="https://wa.me/[NUMBER]?text=Hello%20Doctor%2C%20I%20would%20like%20to%20know%20about%20consultation%20timings." target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.9 2.4 1.02 2.56c.12.17 1.75 2.67 4.24 3.75.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+            Message on WhatsApp
+          </a>
+          <a class="btn btn--quiet" href="#conditions">Conditions treated</a>
+        </div>
+      </div>
+
+      <div class="hero__media reveal" data-d="1">
+        <div class="portrait" id="portrait">
+          <div class="portrait__ph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+              <circle cx="12" cy="8.5" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/>
+            </svg>
+            <span>Doctor photo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ about in brief ============ -->
+  <section class="band band--panel" id="about">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="label">About the doctor</p>
+        <h2>Care that begins with listening</h2>
+      </div>
+      <div class="about reveal" data-d="1">
+        <p class="about__body"><span class="ph">[2–3 lines bio]</span></p>
+        <p class="about__more"><a class="link-q" href="#">Read the full profile</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ conditions ============ -->
+  <section class="band" id="conditions">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="label">Areas of care</p>
+        <h2>Conditions we help with</h2>
+      </div>
+
+      <div class="conditions">
+        <article class="condition reveal">
+          <span class="condition__dot" aria-hidden="true"><span></span></span>
+          <h3>Depression</h3>
+          <p>Low mood, loss of interest, and tiredness that stays for weeks.</p>
+        </article>
+        <article class="condition reveal" data-d="1">
+          <span class="condition__dot" aria-hidden="true"><span></span></span>
+          <h3>Anxiety</h3>
+          <p>Constant worry, restlessness, or fear that gets in the way of daily life.</p>
+        </article>
+        <article class="condition reveal" data-d="2">
+          <span class="condition__dot" aria-hidden="true"><span></span></span>
+          <h3>OCD</h3>
+          <p>Repeated unwanted thoughts and actions that are hard to stop.</p>
+        </article>
+        <article class="condition reveal">
+          <span class="condition__dot" aria-hidden="true"><span></span></span>
+          <h3>Addiction</h3>
+          <p>Difficulty cutting down on alcohol, tobacco, or other substances.</p>
+        </article>
+        <article class="condition reveal" data-d="1">
+          <span class="condition__dot" aria-hidden="true"><span></span></span>
+          <h3>Sleep Problems</h3>
+          <p>Trouble falling asleep, staying asleep, or waking up unrested.</p>
+        </article>
+        <article class="condition reveal" data-d="2">
+          <span class="condition__dot" aria-hidden="true"><span></span></span>
+          <h3>Stress</h3>
+          <p>Pressure from work, studies, or family that feels hard to carry alone.</p>
+        </article>
+      </div>
+
+      <p class="after reveal" data-d="2"><a class="link-q" href="#">All conditions</a></p>
+    </div>
+  </section>
+
+  <!-- ============ videos ============ -->
+  <section class="band band--panel" id="videos">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="label">In the doctor&rsquo;s words</p>
+        <h2>Videos on mental health</h2>
+      </div>
+
+      <div class="videos">
+        <article class="video reveal">
+          <div class="video__thumb"><span class="video__play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+          <h3><span class="ph">[Video title]</span></h3>
+          <p class="label">Depression</p>
+        </article>
+        <article class="video reveal" data-d="1">
+          <div class="video__thumb"><span class="video__play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+          <h3><span class="ph">[Video title]</span></h3>
+          <p class="label">Anxiety</p>
+        </article>
+        <article class="video reveal" data-d="2">
+          <div class="video__thumb"><span class="video__play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+          <h3><span class="ph">[Video title]</span></h3>
+          <p class="label">Sleep</p>
+        </article>
+      </div>
+
+      <p class="videos__more reveal" data-d="2">
+        <a class="btn btn--quiet" href="https://www.youtube.com/@dr.v.u.karthikeyanmdpsychiatry" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ testimonials — anonymous ============ -->
+  <section class="band" id="testimonials">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="label">In their words</p>
+        <h2>What patients share</h2>
+      </div>
+
+      <div class="quotes reveal" data-d="1">
+        <blockquote class="quote">
+          <span class="quote__dot" aria-hidden="true"></span>
+          <p><span class="ph">[Testimonial 1 — to be supplied]</span></p>
+          <cite>&mdash; Patient, <span class="ph">[Month Year]</span></cite>
+        </blockquote>
+        <blockquote class="quote">
+          <span class="quote__dot" aria-hidden="true"></span>
+          <p><span class="ph">[Testimonial 2 — to be supplied]</span></p>
+          <cite>&mdash; Patient, <span class="ph">[Month Year]</span></cite>
+        </blockquote>
+        <blockquote class="quote">
+          <span class="quote__dot" aria-hidden="true"></span>
+          <p><span class="ph">[Testimonial 3 — to be supplied]</span></p>
+          <cite>&mdash; Patient, <span class="ph">[Month Year]</span></cite>
+        </blockquote>
+      </div>
+
+      <div class="quotes__foot reveal" data-d="2">
+        <a class="link-q" href="[GOOGLE REVIEW LINK]">Read our reviews on Google</a>
+        <p class="sample-note">Placeholders only &mdash; real testimonials to be supplied and approved by the doctor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ location ============ -->
+  <section class="band band--panel" id="location">
+    <div class="shell location">
+      <div class="reveal">
+        <p class="label">Visit us</p>
+        <h2>Clinic location</h2>
+        <dl class="facts">
+          <div>
+            <dt>Address</dt>
+            <dd><span class="ph">[ADDRESS]</span></dd>
+          </div>
+          <div>
+            <dt>Consultation timings</dt>
+            <dd><span class="ph">[TIMINGS]</span></dd>
+          </div>
+          <div>
+            <dt>Appointments</dt>
+            <dd>Please send a message on WhatsApp and we will confirm a time for you.</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="map reveal" data-d="1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+          <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span>Map &mdash; [GOOGLE MAPS EMBED]</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ footer ============ -->
+<footer class="footer">
+  <div class="shell footer__grid">
+    <div class="footer__brand">
+      <img class="footer__logo" src="../../assets/img/logo.png" alt="Indira Mind Clinic" width="76" height="106" loading="lazy">
+      <p class="footer__about">Dr. V. U. Karthikeyan, MD (Psychiatry) &mdash; Indira Mind Clinic.</p>
+      <div class="social">
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1Z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@dr.v.u.karthikeyanmdpsychiatry" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#about">About Doctor</a></li>
+        <li><a href="#conditions">Conditions</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#location">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Clinic</h4>
+      <ul>
+        <li><span class="ph">[ADDRESS]</span></li>
+        <li><span class="ph">[TIMINGS]</span></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="shell footer__base">
+    <p>Information on this website is for general awareness and is not a substitute for medical consultation.</p>
+    <p>&copy; 2026 Indira Mind Clinic</p>
+  </div>
+</footer>
+
+<!-- floating WhatsApp -->
+<a class="wa" href="https://wa.me/[NUMBER]?text=Hello%20Doctor%2C%20I%20would%20like%20to%20know%20about%20consultation%20timings." target="_blank" rel="noopener noreferrer" aria-label="Message the clinic on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.9 2.4 1.02 2.56c.12.17 1.75 2.67 4.24 3.75.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+</a>
+
+<a class="back" href="../index.html">&larr; All styles</a>
+
+<script>
+(function(){
+  "use strict";
+
+  /* --- mobile menu --- */
+  var btn = document.getElementById("menuBtn");
+  var nav = document.getElementById("nav");
+
+  btn.addEventListener("click", function(){
+    var open = nav.classList.toggle("is-open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+
+  nav.addEventListener("click", function(e){
+    if (e.target.tagName === "A" && nav.classList.contains("is-open")) {
+      nav.classList.remove("is-open");
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-label", "Open menu");
+    }
+  });
+
+  /* --- doctor photo: show it only if the file actually exists --- */
+  var portrait = document.getElementById("portrait");
+  var probe = new Image();
+  probe.onload = function(){
+    portrait.style.backgroundImage = 'url("../../assets/img/doctor.jpg")';
+    portrait.classList.add("has-photo");
+  };
+  probe.src = "../../assets/img/doctor.jpg";
+
+  /* --- reveal: a slow fade, nothing slides --- */
+  var items = document.querySelectorAll(".reveal");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (reduce || !("IntersectionObserver" in window)) {
+    Array.prototype.forEach.call(items, function(el){ el.classList.add("is-in"); });
+    return;
+  }
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-in");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -6% 0px" });
+
+  Array.prototype.forEach.call(items, function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
