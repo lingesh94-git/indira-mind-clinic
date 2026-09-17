@@ -19,7 +19,7 @@ You are the **builder**. You write and edit code.
 ## 3. Project phases
 
 ### PHASE 1 — Design prototypes (CURRENT PHASE)
-Build the **Home page only**, in **5 different luxury styles**, so the doctor can choose one.
+Build the **Home page only**, in **8 different styles**, so the doctor can choose one.
 
 | No | Folder | Style | Feel |
 |----|--------|-------|------|
@@ -28,13 +28,16 @@ Build the **Home page only**, in **5 different luxury styles**, so the doctor ca
 | 3 | `prototypes/03-japandi/` | Japandi | Peaceful, natural, very minimal |
 | 4 | `prototypes/04-organic-natural/` | Organic / Natural | Healing, wellness retreat |
 | 5 | `prototypes/05-glass-bento/` | Glassmorphism + Bento Grid | Modern, fresh, premium tech |
+| 6 | `prototypes/06-atelier/` | Atelier Luxury | Fine catalogue, light sweeping over each image |
+| 7 | `prototypes/07-warm-care/` | Warm Care | Friendly modern healthcare — **currently published for review** |
+| 8 | `prototypes/08-warm-care-waves/` | Warm Care + Waves | Design 07 with curved waves between every section |
 
-Also build `prototypes/index.html` — a simple chooser page showing 5 cards
+Also build `prototypes/index.html` — a simple chooser page showing one card per style
 (style name, one-line description, "Open" button) so the doctor can compare.
 
 **Prototype rules**
 - Home page only, English only.
-- Same content in all 5 (Section 6 below) — only the design changes, so the comparison is fair.
+- Same content in all of them (Section 6 below) — only the design changes, so the comparison is fair.
 - Each prototype is one self-contained `index.html` (CSS inside `<style>`, small JS inside `<script>` is OK **for prototypes only**).
 - Google Fonts allowed. No other external libraries.
 - Use the logo at `assets/img/logo.png` and doctor photo at `assets/img/doctor.jpg`. If a file is missing, show a neat placeholder box.
@@ -50,6 +53,14 @@ Also build `prototypes/index.html` — a simple chooser page showing 5 cards
 3. **Japandi** — warm beige (#EFE9E1), stone grey, muted green, natural textures (subtle paper/wood tone), low-contrast calm layout, rounded soft corners, lots of empty space, simple sans (Jost / Noto Sans).
 4. **Organic / Natural** — sage (#A3B18A), sand (#E9E2D0), forest green (#2F4F3E), blob/wave shapes, leaf line-art, rounded cards, gentle parallax.
 5. **Glassmorphism + Bento Grid** — soft mint-to-white gradient, frosted-glass cards (backdrop-filter blur), bento-style grid of different-size boxes for sections, clean sans (Manrope / Plus Jakarta Sans), subtle depth.
+6. **Atelier Luxury** — ivory (#F6F3EE), charcoal (#232120), bronze (#A87E4F), stone (#7D766B). Cormorant Garamond + Inter. Catalogue tiles with the caption over the image; a band of light sweeps across each tile on hover and once when it first scrolls into view.
+7. **Warm Care** — terracotta (#E76943), cream (#FDFBF6), tint (#FFF5F2), forest green (#245B33). Fraunces + Inter. Large rounded cards, pill buttons, header dropdown menus, single-slide video carousel, hand-drawn condition illustrations.
+8. **Warm Care + Waves** — design 07 with curved SVG wave dividers between sections. Secondary cream deepened to #F6EFE2 so the curves are visible; the Location band moves onto that sand tone for the same reason.
+
+**Publishing a review link during Phase 1**
+The doctor cannot judge a design from a description, so Phase 1 may publish
+**one chosen prototype** to a temporary review link. This is a review link, not
+a launch — see Section 14. The real launch gate is unchanged.
 
 ### PHASE 2 — Full website (AFTER the doctor picks one style)
 Build all pages in the chosen style, add Tamil, CMS, analytics, security, then deploy.
@@ -63,7 +74,7 @@ Do not start Phase 2 until Lingesh says the style is approved.
 - Conditions: simple explanation + common signs only (**no videos** on this page).
 - Analytics: **Google Analytics 4** with a cookie consent banner (load GA only after the visitor accepts). Phase 2 only.
 - CMS: **Pages CMS** (Phase 2).
-- Logo: green "walking person with brain" logo (chosen set). Header uses the horizontal version; favicon uses the circle version.
+- Logo: green "walking person with brain" logo. **The only file supplied is `assets/img/logo.png` — stacked/vertical, 361x502, transparent, brand green #1D453F.** There is no horizontal version and no circle version. Prototypes crop the mark out of it with CSS for the header and use the full stacked logo in the footer. If a horizontal version and a circle version are produced later, use them for the header and the favicon.
 
 ## 5. Final website pages (Phase 2)
 Menu: Home | About Doctor | Conditions | Videos | FAQs | Contact | English / தமிழ்
@@ -84,7 +95,7 @@ Footer on every page: social links (Instagram, Facebook, YouTube), quick links, 
 
 Also: favicon, share image (Open Graph) for WhatsApp/Facebook link previews.
 
-## 6. Home page content (use in all 5 prototypes)
+## 6. Home page content (use in all prototypes)
 - Holiday banner: "Clinic closed on [DATE]" (show it, so the doctor sees how it looks)
 - Name: Dr. V. U. Karthikeyan — MD (Psychiatry)
 - Clinic: Indira Mind Clinic
@@ -97,6 +108,19 @@ Also: favicon, share image (Open Graph) for WhatsApp/Facebook link previews.
 - Location: `[ADDRESS]`, `[TIMINGS]`, map placeholder box
 - WhatsApp: `https://wa.me/[NUMBER]?text=Hello%20Doctor%2C%20I%20would%20like%20to%20know%20about%20consultation%20timings.`
 
+**Extra blocks used in prototypes 07 and 08**
+- **Statistics band** — three figures with a short description under each. **Keep it.**
+  Every figure stays as `[FIGURE]` until the doctor supplies a real number.
+  **Never invent a statistic.** No success rates, cure rates, recovery percentages
+  or patient-satisfaction scores unless the doctor provides the figure and the
+  source, and approves it in writing. If he has no data, replace the band with
+  facts that are true and verifiable — years in practice, languages spoken,
+  conditions treated — or remove it.
+- Three "how we care" cards: unhurried consultations / plain language / private and confidential
+- A wide call-to-action card ("Not sure where to begin?") with the WhatsApp button
+- A contact strip above the footer showing address and timings
+- Header dropdown menus listing conditions and video topics
+
 ## 7. What the doctor can edit in Pages CMS (Phase 2)
 Keep all editable content in `content/` as JSON files, and describe them in `.pages.yml`.
 
@@ -105,6 +129,7 @@ Keep all editable content in `content/` as JSON files, and describe them in `.pa
 - Clinic timings, address, WhatsApp number, WhatsApp pre-filled message
 - Clinic photos
 - Holiday notice (text + on/off switch)
+- The three statistics (figure + description) + on/off switch
 - Google Maps link, Google review link
 - Conditions (add / edit / remove)
 - FAQs
@@ -131,7 +156,9 @@ Rules for CMS:
 ## 9. Tech stack (Phase 2)
 - Plain HTML + CSS + vanilla JavaScript. No frameworks, no build step.
 - Shared files: `assets/css/style.css`, `assets/js/main.js`
-- Hosting: Netlify. Code: GitHub.
+- Hosting: **GitHub Pages** (changed from Netlify). Code: GitHub.
+- Repo: `https://github.com/lingesh94-git/indira-mind-clinic` (public).
+- Pages serves the **`docs/` folder only**. `prototypes/` stays in the repo but is never published.
 - No database, no login, no backend, no forms, no payments.
 
 ## 10. Security (Phase 2)
@@ -139,6 +166,10 @@ Rules for CMS:
 - No inline scripts or `onclick=` in the final site (so strict CSP works).
 - External links: `rel="noopener noreferrer"`.
 - `_headers` file with: Content-Security-Policy (allow self, Google Fonts, youtube-nocookie.com, i.ytimg.com, Google Maps embed, Google Analytics / googletagmanager), Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy.
+- **GitHub Pages cannot send custom headers**, so a `_headers` file does nothing there
+  and grade A is not achievable on Pages. Before launch, either move hosting to
+  Netlify or Cloudflare Pages (both support `_headers`), or accept the lower grade.
+  **Open decision — see Section 15.**
 - Target: grade A on securityheaders.com and Mozilla Observatory.
 - 2FA on GitHub, Netlify, domain, Google accounts (Lingesh does this).
 
@@ -154,13 +185,52 @@ Unique title + description per page, hreflang (English/Tamil), Open Graph share 
 
 ## 13. Git
 - Small commits: `feat: add japandi prototype`, `fix: mobile menu`.
-- Big changes on a branch; merge after review.
+- During Phase 1, commits go straight to `main` — prototypes are drafts and nothing
+  is live except the review link. From Phase 2, big changes go on a branch and merge
+  after review.
+- **Never commit `amaha screenshots/`** or any other competitor material. It is
+  listed in `.gitignore`. The repo is public.
 
-## 14. Deployment (Phase 2)
-1. Deploy to temporary Netlify URL.
-2. Gemini test → Lingesh review → doctor approval.
-3. Security header check and fixes.
-4. Before connecting mindmenderdoctor.com, list current DNS records (especially email/MX) so nothing breaks.
+## 14. Deployment
 
-## 15. Out of scope (ask first)
+### Review link (Phase 1 — already live)
+- Host: **GitHub Pages**, from the `docs/` folder on branch `main`.
+- Live: `https://lingesh94-git.github.io/indira-mind-clinic/`
+- `docs/` currently contains **prototype 07 only**. The other prototypes return 404.
+- Every page carries `noindex`, so search engines will not list it.
+- To change which prototype is published, rebuild `docs/index.html` from that
+  prototype: rewrite `../../assets/img/` to `assets/img/` and drop the
+  "All styles" back link.
+- This is a review link for the doctor. **It is not a launch.**
+
+### Launch (Phase 2)
+1. Doctor approves the design and every word of the content.
+2. Gemini browser test → Lingesh review.
+3. Resolve the hosting decision in Section 15 (headers cannot be set on GitHub Pages).
+4. Security header check and fixes.
+5. Remove every `[PLACEHOLDER]` and the `noindex` tags.
+6. Before connecting mindmenderdoctor.com, list current DNS records (especially
+   email/MX) so nothing breaks. Connect only after the doctor approves.
+
+## 15. Open decisions
+These are unresolved. Do not treat any of them as settled.
+
+1. **Which design wins** — 07 or 08, or another. The doctor has not chosen.
+2. **The accent colour in 07/08.** The design is closely modelled on a competitor
+   in the same sector and country, at Lingesh's instruction. Code, text and
+   illustrations are all original, so copyright exposure is low, but the overall
+   look and feel is deliberately close — a trade-dress and reputational risk that
+   falls on the doctor. **Recommendation: shift the terracotta #E76943 to a deeper
+   rust or clay, and simplify the header dropdown, before launch.** Not yet decided.
+3. **Hosting for launch** — stay on GitHub Pages and accept no security headers,
+   or move to Netlify / Cloudflare Pages. See Section 10.
+4. **The statistics band** — keep the block (decided), but the three figures are
+   still `[FIGURE]`. The doctor must supply real numbers or the band gets
+   true, non-clinical facts instead.
+5. **Testimonial wording and the condition-card questions** — marked
+   `<!-- REVIEW: doctor -->` in the code, not yet reviewed.
+6. **Should `CLAUDE.md` and `AGENTS.md` stay in the public repo?** They contain no
+   secrets, but they are internal working notes.
+
+## 16. Out of scope (ask first)
 Appointment booking, call button, payments, patient login, stored patient data, chatbots, articles/blog, WordPress.
