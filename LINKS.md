@@ -48,14 +48,15 @@ Then open:
 
 | Page | Address |
 |------|---------|
-| **Chooser — all 7 designs** | http://localhost:8000/prototypes/ |
+| **Chooser — all 8 designs** | http://localhost:8000/prototypes/ |
 | 01 Minimalist Luxury | http://localhost:8000/prototypes/01-minimalist-luxury/ |
 | 02 Editorial | http://localhost:8000/prototypes/02-editorial/ |
 | 03 Japandi | http://localhost:8000/prototypes/03-japandi/ |
 | 04 Organic / Natural | http://localhost:8000/prototypes/04-organic-natural/ |
 | 05 Glass + Bento | http://localhost:8000/prototypes/05-glass-bento/ |
 | 06 Atelier Luxury | http://localhost:8000/prototypes/06-atelier/ |
-| 07 Warm Care | http://localhost:8000/prototypes/07-warm-care/ |
+| 07 Warm Care **(published)** | http://localhost:8000/prototypes/07-warm-care/ |
+| 08 Warm Care + Waves | http://localhost:8000/prototypes/08-warm-care-waves/ |
 | 07 as published (docs copy) | http://localhost:8000/docs/ |
 
 These addresses only work while the server is running, and only on this
