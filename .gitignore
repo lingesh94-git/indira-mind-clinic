@@ -1,6 +1,11 @@
 # Competitor reference material — must never be published
 amaha screenshots/
 
+# Internal working notes — kept local, not published.
+# The repo is public; these are our build rules and review notes, not the site.
+CLAUDE.md
+AGENTS.md
+
 # OS / editor noise
 Thumbs.db
 desktop.ini
