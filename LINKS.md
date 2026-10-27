@@ -1,6 +1,6 @@
 # Links — Indira Mind Clinic website
 
-Everything in one place. Last updated: 17 September 2026.
+Everything in one place. Last updated: 27 October 2026.
 
 ---
 
@@ -8,7 +8,8 @@ Everything in one place. Last updated: 17 September 2026.
 
 https://lingesh94-git.github.io/indira-mind-clinic/
 
-- Shows **prototype 07 — Warm Care** only. The other six designs are not reachable.
+- Shows **design 08 — Warm Care + Waves**, approved by the doctor on 27 October 2026.
+- The archived designs are not reachable from the web.
 - Works on phone, tablet and laptop.
 - Hidden from Google (every page carries a `noindex` tag), so it can only be
   opened by someone who has the link. Send it directly, don't post it anywhere.
@@ -28,7 +29,7 @@ and anything in [square brackets] is a detail still to be supplied.
 | Build status (is it published yet?) | https://github.com/lingesh94-git/indira-mind-clinic/actions |
 
 Pages is set to: branch `main`, folder `/docs`.
-That `/docs` setting is what makes only prototype 07 public.
+That `/docs` setting is what makes only the working page public.
 
 After any change is pushed, the live link updates itself in about 2 minutes.
 
@@ -48,16 +49,20 @@ Then open:
 
 | Page | Address |
 |------|---------|
-| **Chooser — all 8 designs** | http://localhost:8000/prototypes/ |
-| 01 Minimalist Luxury | http://localhost:8000/prototypes/01-minimalist-luxury/ |
-| 02 Editorial | http://localhost:8000/prototypes/02-editorial/ |
-| 03 Japandi | http://localhost:8000/prototypes/03-japandi/ |
-| 04 Organic / Natural | http://localhost:8000/prototypes/04-organic-natural/ |
-| 05 Glass + Bento | http://localhost:8000/prototypes/05-glass-bento/ |
-| 06 Atelier Luxury | http://localhost:8000/prototypes/06-atelier/ |
-| 07 Warm Care **(published)** | http://localhost:8000/prototypes/07-warm-care/ |
-| 08 Warm Care + Waves | http://localhost:8000/prototypes/08-warm-care-waves/ |
-| 07 as published (docs copy) | http://localhost:8000/docs/ |
+| **THE WORKING PAGE — design 08** | http://localhost:8000/docs/ |
+| Design archive (01–07) | http://localhost:8000/prototypes/ |
+
+Archived designs, frozen — kept only for reference:
+
+| | |
+|---|---|
+| 01 Minimalist Luxury | http://localhost:8000/prototypes/archive/01-minimalist-luxury/ |
+| 02 Editorial | http://localhost:8000/prototypes/archive/02-editorial/ |
+| 03 Japandi | http://localhost:8000/prototypes/archive/03-japandi/ |
+| 04 Organic / Natural | http://localhost:8000/prototypes/archive/04-organic-natural/ |
+| 05 Glass + Bento | http://localhost:8000/prototypes/archive/05-glass-bento/ |
+| 06 Atelier Luxury | http://localhost:8000/prototypes/archive/06-atelier/ |
+| 07 Warm Care | http://localhost:8000/prototypes/archive/07-warm-care/ |
 
 These addresses only work while the server is running, and only on this
 computer. They cannot be sent to anyone.

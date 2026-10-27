@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!-- Indira Mind Clinic — Home page. THE working file.
+     Design 08 (Warm Care + Waves), approved by the doctor 27 Oct 2026.
+     Edit this file. GitHub Pages publishes it from docs/. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -17,7 +20,7 @@
   --tint:#FFF5F2;
   --tint-2:#FFE9E3;
   --cream:#FDFBF6;
-  --cream-2:#FFF6EE;
+  --cream-2:#F6EFE2;   /* deepened from #FFF6EE so the waves read */
   --forest:#245B33;
   --forest-dark:#193F2A;
   --ink:#1E2420;
@@ -60,6 +63,14 @@ button{font:inherit}
 .ph{color:var(--terracotta-dark);background:var(--tint-2);border-radius:999px;
   padding:2px 12px;font-size:.92em;font-weight:500;display:inline-block;line-height:1.6}
 .band--forest .ph,.cta-card .ph,.mega__promo .ph{color:#fff;background:rgba(255,255,255,.22)}
+
+/* ============ wave dividers (from prototype 04) ============ */
+/* The div carries the colour ABOVE; the svg path is filled with the colour BELOW. */
+.wave{display:block;line-height:0;position:relative;z-index:2}
+.wave svg{display:block;width:100%;height:clamp(38px,5.5vw,84px)}
+.wave--cream{background:var(--cream)}
+.wave--sand{background:var(--cream-2)}
+.wave--forest{background:var(--forest)}
 
 /* ============ holiday banner ============ */
 .holiday{position:relative;z-index:6;background:var(--forest);color:#DCEBE0;
@@ -748,6 +759,10 @@ h2{font-family:var(--serif);font-size:clamp(27px,3.6vw,44px);font-weight:600;
     </div>
   </section>
 
+  <div class="wave wave--cream" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#F6EFE2" d="M0 44c180-38 360-38 540-6s360 44 540 12 300-30 360-24v64H0z"/></svg>
+  </div>
+
   <!-- ============ conditions ============ -->
   <!-- REVIEW: doctor — wording of the six condition cards below -->
   <section class="band band--cream cond" id="conditions">
@@ -834,6 +849,10 @@ h2{font-family:var(--serif);font-size:clamp(27px,3.6vw,44px);font-weight:600;
     </div>
   </section>
 
+  <div class="wave wave--sand" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#FDFBF6" d="M0 30c220 42 420 42 640 10s420-40 560-14 180 26 240 22v42H0z"/></svg>
+  </div>
+
   <!-- ============ videos — one large slide with side arrows ============ -->
   <section class="band" id="videos">
     <div class="shell">
@@ -885,6 +904,10 @@ h2{font-family:var(--serif);font-size:clamp(27px,3.6vw,44px);font-weight:600;
     </div>
   </section>
 
+  <div class="wave wave--cream" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#245B33" d="M0 52c160-34 320-44 480-20s320 46 480 22 300-32 480-18v54H0z"/></svg>
+  </div>
+
   <!-- ============ testimonials ============ -->
   <section class="band band--forest" id="testimonials">
     <div class="shell">
@@ -930,6 +953,10 @@ h2{font-family:var(--serif);font-size:clamp(27px,3.6vw,44px);font-weight:600;
     </div>
   </section>
 
+  <div class="wave wave--forest" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#FDFBF6" d="M0 40c200 40 400 40 600 8s400-38 540-12 240 28 300 24v30H0z"/></svg>
+  </div>
+
   <!-- ============ wide CTA ============ -->
   <section class="band">
     <div class="shell">
@@ -948,8 +975,12 @@ h2{font-family:var(--serif);font-size:clamp(27px,3.6vw,44px);font-weight:600;
     </div>
   </section>
 
+  <div class="wave wave--cream" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#F6EFE2" d="M0 46c180 36 380 36 560 6s380-36 520-12 260 26 360 22v28H0z"/></svg>
+  </div>
+
   <!-- ============ location ============ -->
-  <section class="band band--tint" id="location">
+  <section class="band band--cream" id="location">
     <div class="shell location">
       <div class="loc-card reveal">
         <p class="label">Visit us</p>
@@ -995,6 +1026,10 @@ h2{font-family:var(--serif);font-size:clamp(27px,3.6vw,44px);font-weight:600;
       <span class="ph">[TIMINGS]</span>
     </span>
   </div>
+</div>
+
+<div class="wave wave--sand" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#193F2A" d="M0 38c220 44 420 44 640 12s420-42 560-16 180 28 240 24v32H0z"/></svg>
 </div>
 
 <!-- ============ footer ============ -->

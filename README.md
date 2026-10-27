@@ -2,13 +2,17 @@
 
 Static website for **Dr. V. U. Karthikeyan, MD (Psychiatry)** — Indira Mind Clinic.
 
-## Status: Phase 1 — design review
+## Status
 
-The published page is a **design prototype for review only**. It is not the live
-clinic website, and it is not linked from anywhere.
+**Design 08 was approved by the doctor on 27 October 2026.** Work now happens on
+that one design only.
 
-- Published page: `docs/` (GitHub Pages serves this folder only)
-- Working prototypes: `prototypes/` — kept for reference, not published
+- `docs/index.html` — **the working page.** Edit this file. GitHub Pages
+  publishes this folder, so a change is live a couple of minutes after it is pushed.
+- `prototypes/archive/` — designs 01–07, frozen, kept for reference. Not published.
+
+The page is still a review version: it carries `noindex` and is not linked from
+anywhere, and it goes properly live only once the doctor approves the content too.
 
 ## Placeholders
 
@@ -18,7 +22,7 @@ Still needed: WhatsApp number, address, timings, intro line, short bio,
 Google review link, holiday date, social links, doctor photo, testimonials.
 
 To add the doctor's photo, save it as `docs/assets/img/doctor.jpg` — it then
-appears on the page automatically.
+appears in the hero, the conditions section and both dropdown panels automatically.
 
 ## Tech
 
