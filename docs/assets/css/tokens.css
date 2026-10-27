@@ -1,0 +1,26 @@
+/* Design tokens — every colour, font and size lives here.
+   Change the look of the whole site from this one file.
+   Indira Mind Clinic */
+
+:root{
+  --terracotta:#E76943;
+  --terracotta-dark:#D4532C;
+  --tint:#FFF5F2;
+  --tint-2:#FFE9E3;
+  --cream:#FDFBF6;
+  --cream-2:#F6EFE2;   /* deepened from #FFF6EE so the waves read */
+  --forest:#245B33;
+  --forest-dark:#193F2A;
+  --ink:#1E2420;
+  --grey:#4C4C4C;
+  --grey-2:#6E736F;
+  --line:#E0E0E0;
+  --white:#FFFFFF;
+  --sand:#F3E7D8;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --r:24px;
+  --r-lg:32px;
+  --shell:1200px;
+  --gutter:clamp(18px,4vw,48px);
+}
